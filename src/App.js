@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ProjectList from './components/ProjectList';
+import About from './components/About';
+import Contact from './components/Contact';
+import './App.css'; // Make sure to create an App.css file for styling
 
 function App() {
+  // Sample project data
+  const projects = [
+    { id: 1, title: 'Project 1', description: 'Description of Project 1', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 2, title: 'Project 2', description: 'Description of Project 2', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 3, title: 'Project 3', description: 'Description of Project 3', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 4, title: 'Project 4', description: 'Description of Project 4', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 5, title: 'Project 5', description: 'Description of Project 5', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 6, title: 'Project 6', description: 'Description of Project 6', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+      <div id="animation-section">
+  <h1 className="title">Kyle Forsyth Web Development</h1>
+  <div className="animation-box"></div>
+</div>
+
+        <ProjectList projects={projects} />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+

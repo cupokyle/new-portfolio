@@ -1,38 +1,286 @@
-.App {
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --header-height: 60px;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  color: #fff;
+  z-index: 2; /* Ensure it's above the animation section */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds a subtle shadow for better separation */
+}
+
+
+header a {
+  color: #fff; /* Ensures links are also white */
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  margin: 0 10px;
+}
+
+footer {
+  background: var(--secondary-color);
+  color: #fff;
   text-align: center;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  min-height: 500px;
+  margin: 20px 0;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#projects {
+  min-height: 600px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This spreads out the items evenly */
+  gap: 20px; /* Adds space between items */
+}
+
+.project-item {
+  width: calc(33.333% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px; /* This can be adjusted or removed depending on your gap in .project-list */
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.project-item h3 {
+  background: var(--secondary-color);
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+}
+
+.project-item p {
+  padding: 0 10px 10px;
+}
+
+.menu-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 24px; /* Adjust size as needed */
+}
+
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    display: none; /* Hide the menu initially */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    position: absolute;
+    right: 0;
+    top: var(--header-height);
+    width: 100%;
+    color: #fff; /* Ensures text is white */
+
+  }
+
+  header nav.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Cover only the top half of the viewport */
+    background: linear-gradient(270deg, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: AnimationGradient 15s ease infinite;
+    z-index: 2;
+    overflow-y: auto; /* In case your menu items exceed the available space */
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header nav ul li a {
+    color: #fff !important; /* Forces text color to be white */
+  }
+
+  header ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-icon i {
+    color: inherit; /* This ensures the icon color changes with the header's color */
+  }
+
+  header ul li a {
+    color: #fff; /* Ensures links are also white */
+  }
+
+  header nav.active ul {
+    display: flex; /* Show the menu when active */
+    background: linear-gradient(270deg, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: AnimationGradient 15s ease infinite;
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+  }
+
+  .project-list {
+    justify-content: center; /* This centers the items when they stack vertically */
+  }
+
+  .project-item {
+    width: 100%; /* Each item takes full width on smaller screens */
+    /* Adjust the height of images on smaller screens if needed */
+    height: auto; /* Optional: Adjust this if you want to change the image height on mobile */
+  }
+
+  .project-item img {
+    height: 150px; /* Adjust for mobile */
+  }
+
+  section {
+    min-height: auto; /* Allow sections to adjust to content size on mobile */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#animation-section {
+  height: 300px; /* Adjust based on your preference */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(270deg, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: AnimationGradient 15s ease infinite;
+  position: relative; /* Allows absolute positioning within */
 }
 
-.App-link {
-  color: #61dafb;
+.animation-box {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  animation: AnimationGradient 15s ease infinite, morph 8s infinite ease-in-out;
+  /* Applying a slight blur to enhance the gooey effect */
+  filter: blur(1px);
 }
 
-@keyframes App-logo-spin {
-  from {
+
+.title {
+  position: absolute;
+  color: #fff; /* Ensure the text color contrasts with the background */
+  font-size: 24px; /* Adjust based on your design */
+  text-align: center;
+  width: 100%; /* Ensures the text is centered regardless of its container's width */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts the positioning to truly center the element */
+  z-index: 1; /* Ensures the text is above the animated circle */
+}
+
+@keyframes AnimationGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes clumsyRotate {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 40% 50%;
+  }
+  75% {
+    border-radius: 50% 30% 50% 70% / 40% 60% 30% 60%;
+  }
+}
+
+
