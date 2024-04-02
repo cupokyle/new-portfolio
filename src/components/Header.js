@@ -47,6 +47,7 @@ const Header = () => {
       <nav ref={menuRef} className={isMenuOpen ? 'active' : ''}>
         <ul>
           <li>
+            { /*eslint-disable-next-line jsx-a11y/anchor-is-valid */ }
             <a href="#" onClick={scrollToTop}>
               <i className="fas fa-home"></i> Home
             </a>
