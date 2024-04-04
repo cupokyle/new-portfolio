@@ -10,12 +10,12 @@ import './App.css'; // Make sure to create an App.css file for styling
 function App() {
   // Sample project data
   const projects = [
-    { id: 1, title: 'Project 1', description: 'Description of Project 1', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 4, title: 'Project 4', description: 'Description of Project 4', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 5, title: 'Project 5', description: 'Description of Project 5', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 6, title: 'Project 6', description: 'Description of Project 6', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 1, title: 'Wedding Website', description: 'Description of Project 1', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 2, title: 'What Now?', description: 'Description of Project 2', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 3, title: 'Tweeter', description: 'Description of Project 3', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 4, title: 'Rude Dude Blackjack', description: 'Description of Project 4', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 5, title: 'AirCall', description: 'Description of Project 5', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+    { id: 6, title: 'Unity Game?', description: 'Description of Project 6', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
   ];
 
   return (
