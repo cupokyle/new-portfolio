@@ -104,6 +104,11 @@ section h2 {
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 20px; /* This can be adjusted or removed depending on your gap in .project-list */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .project-item img {
@@ -123,6 +128,13 @@ section h2 {
 .project-item p {
   padding: 0 10px 10px;
 }
+
+.project-item:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
 
 .menu-icon {
   display: none; /* Hide by default */
@@ -289,5 +301,3 @@ section h2 {
     border-radius: 50% 30% 50% 70% / 40% 60% 30% 60%;
   }
 }
-
-
