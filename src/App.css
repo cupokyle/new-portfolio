@@ -68,8 +68,57 @@ header ul li {
   margin: 0 10px;
 }
 
+.aboutBox {
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.aboutBox h4 {
+  font-weight: bold;
+  font-size: 1.25em; /* Adjust the size as needed */
+}
+
+.aboutHalf {
+  width: 50%;
+  margin: 2vh;
+  border-radius: 5px;
+}
+
+.aboutHalfLeftTop {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.aboutHalfRightBottom {
+  display: flex;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+#bioBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bioHalf {
+  width: 50%;
+  height: 100%;
+  padding: 2%;
+}
+
+.bioHalfLeft {
+  width: 50%;
+  max-width: 500px;
+  object-fit: cover;
+  height: 100%;
+}
+
 footer {
-  background: var(--secondary-color);
+  background-color: var(--text-color);
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -165,7 +214,6 @@ section h2 {
     top: var(--header-height);
     width: 100%;
     color: #fff; /* Ensures text is white */
-
   }
 
   header nav.active {
@@ -174,7 +222,7 @@ section h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh; /* Cover only the top half of the viewport */
+    height: 33vh; /* Cover only the top half of the viewport */
     background: linear-gradient(270deg, #6a11cb, #2575fc);
     background-size: 400% 400%;
     animation: AnimationGradient 15s ease infinite;
@@ -216,6 +264,30 @@ section h2 {
     right: 20px;
     top: 20px;
     z-index: 3;
+  }
+
+  .aboutBox {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    align-items: center;
+  }
+
+  .aboutHalf {
+    width: 100%;
+  }
+
+  #bioBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bioHalf {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
   }
 
   .project-list {
