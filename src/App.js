@@ -14,6 +14,7 @@ import whatNowImage from './images/wnow-screen.png';
 import tweeterImage from './images/tweeter-screen.png';
 import snipeImage from './images/snipe-screen.png';
 import bioImage from './images/bioImage.png';
+import chutesImage from './images/bioImage.png';
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
     { id: 3, title: 'Tweeter', description: 'A simple Twitter clone - Created as a React.js practise app to improve Front-end skills', imageUrl: tweeterImage, projectLink: 'https://walrus-app-pu4up.ondigitalocean.app/'  },
     { id: 4, title: 'Rude Dude Blackjack', description: 'A basic Blackjack game made slightly more irritating by a very rude dude. Made with React.js', imageUrl: blackjackImage, projectLink: 'https://rudedudeblackjack.netlify.app/'  },
     { id: 5, title: 'Snipe Snacks', description: 'A game created in Unity - similar to Fruit Ninja', imageUrl: snipeImage, projectLink: 'https://play.unity.com/mg/other/snipe-snacks'  },
-    { id: 6, title: 'A Picture of Two Cute Puppies', description: 'Just a picture I found online of some cute little puppies', imageUrl: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', projectLink: ''  },
+    { id: 6, title: 'Chutes & Ladders', description: 'A very basic chutes and ladders browser game, made with JavaScript, HTML, and CSS', imageUrl: chutesImage, projectLink: 'https://ladders.netlify.app/'  },
   ];
 
   return (

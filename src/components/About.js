@@ -1,7 +1,8 @@
 // src/components/About.js
 import React from 'react';
-import { DiJavascript1, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiPostgresql, DiDocker, DiGit, DiVisualstudio } from 'react-icons/di';
+import { DiJavascript1, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiPostgresql, DiDocker, DiGit } from 'react-icons/di';
 import { SiCsharp, SiJenkins, SiJira, SiElasticsearch, SiRedis, SiPostman, SiVisualstudiocode } from 'react-icons/si'; // Import C#, Jenkins, Jira, Elasticsearch, Redis, SOAP (using VS Code as a placeholder), and RestAPI
+import { FaUnity } from 'react-icons/fa';
 
 function About({ bioImage, bioAlt }) {
   const bio1 = "I'm Kyle, a passionate software developer with a love for video games. My journey into coding began with my interest in tabletop RPGs, which first got me fascinated with JavaScript.";
@@ -44,7 +45,7 @@ function About({ bioImage, bioAlt }) {
             <div className="skillItem"><DiCss3 size={70} /><span>CSS</span></div>
             <div className="skillItem"><DiDocker size={70} /><span>Docker</span></div>
             <div className="skillItem"><DiGit size={70} /><span>Git</span></div>
-            <div className="skillItem"><DiVisualstudio size={70} /><span>Unity</span></div>
+            <div className="skillItem"><FaUnity size={70} /><span>Unity</span></div>
             <div className="skillItem"><SiCsharp size={70} /><span>C#</span></div>
             <div className="skillItem"><SiPostman size={70} /><span>RestAPI/SOAP</span></div>
             <div className="skillItem"><SiElasticsearch size={70} /><span>Elasticsearch</span></div>
