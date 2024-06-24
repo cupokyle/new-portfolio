@@ -31,7 +31,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
 }
 
 .container {
@@ -54,6 +55,9 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds a subtle shadow for better separation */
 }
 
+header nav ul li a {
+  color: inherit;
+}
 
 header a {
   color: #fff; /* Ensures links are also white */
@@ -358,7 +362,7 @@ section h2 {
   }
 
   header nav ul li a {
-    color: #fff !important; /* Forces text color to be white */
+    color: inherit;
   }
 
   header ul li {
@@ -371,7 +375,7 @@ section h2 {
   }
 
   header ul li a {
-    color: #fff; /* Ensures links are also white */
+    color: #fff;
   }
 
   header nav.active ul {

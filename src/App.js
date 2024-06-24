@@ -14,7 +14,7 @@ import whatNowImage from './images/wnow-screen.png';
 import tweeterImage from './images/tweeter-screen.png';
 import snipeImage from './images/snipe-screen.png';
 import bioImage from './images/bioImage.png';
-import chutesImage from './images/bioImage.png';
+import chutesImage from './images/chutesImage.png';
 
 function App() {
 
