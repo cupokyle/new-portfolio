@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ProjectList from './components/ProjectList';
+import FeaturedProject from './components/FeaturedProject';
 import About from './components/About';
 import Contact from './components/Contact';
 import './App.css'; // Make sure to create an App.css file for styling
@@ -15,6 +16,8 @@ import tweeterImage from './images/tweeter-screen.png';
 import snipeImage from './images/snipe-screen.png';
 import bioImage from './images/bioImage.png';
 import chutesImage from './images/chutesImage.png';
+// import beanboxImage from './images/beanbox-screen.png';
+import beanboxGif from './images/beanbox-demo.mp4';
 
 function App() {
 
@@ -30,6 +33,21 @@ function App() {
     { id: 6, title: 'Chutes & Ladders', description: 'A very basic chutes and ladders browser game, made with JavaScript, HTML, and CSS', imageUrl: chutesImage, projectLink: 'https://ladders.netlify.app/'  },
   ];
 
+  const featuredProject = {
+    title: 'Beanbox',
+    description:
+      'A dynamic, pack-opening bean-collector game built with React, Node.js, PostgreSQL, and Docker. Features daily pack accumulation, rarity-based reveals, and a new-badge tracking system.',
+    mediaUrl: beanboxGif,           // swap to beanboxImage for static screenshot
+    isVideo: true,                  // set false if using a static image
+    projectLink: 'https://beanbox-frontend.onrender.com/login',
+    features: [
+      'Daily pack accumulation system',
+      'Rarity-based reveal animations',
+      '“New” badge tracking for unseen beans',
+      'Real-time backend integration with PostgreSQL',
+    ],
+  };
+
   return (
     <div className="App">
       <Header />
@@ -38,9 +56,9 @@ function App() {
   <h1 className="title">Kyle Forsyth Web Development</h1>
   <div className="animation-box"></div>
 </div>
-
+        <FeaturedProject {...featuredProject} />
         <ProjectList projects={projects} />
-        <About bioImage={bioImage} bioAlt={bioAlt}/>
+        <About bioImage={bioImage} bioAlt={bioAlt} />
         <Contact />
       </main>
       <Footer />
