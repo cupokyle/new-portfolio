@@ -33,20 +33,25 @@ function App() {
     { id: 6, title: 'Chutes & Ladders', description: 'A very basic chutes and ladders browser game, made with JavaScript, HTML, and CSS', imageUrl: chutesImage, projectLink: 'https://ladders.netlify.app/'  },
   ];
 
-  const featuredProject = {
-    title: 'Beanbox',
-    description:
-      'A dynamic, pack-opening bean-collector game built with React, Node.js, PostgreSQL, and Docker. Features daily pack accumulation, rarity-based reveals, and a new-badge tracking system.',
-    mediaUrl: beanboxGif,           // swap to beanboxImage for static screenshot
-    isVideo: true,                  // set false if using a static image
-    projectLink: 'https://beanbox-frontend.onrender.com/login',
-    features: [
-      'Daily pack accumulation system',
-      'Rarity-based reveal animations',
-      '“New” badge tracking for unseen beans',
-      'Real-time backend integration with PostgreSQL',
-    ],
-  };
+const featuredProject = {
+  title: 'Beanbox (working title)',
+  description:
+    'Beanbox is a scalable, full‑stack React.js collectible mobile game featuring a secure, JWT‑backed authentication and authorization system (email/password signup, password‑reset/forgot flows), a dynamic pack‑opening engine (daily, reward, and promotional packs with configurable rarity distributions), and a responsive, filterable/sortable compendium UI for cataloging and discovering beans.',
+  mediaUrl: beanboxGif,           // use your animated demo or swap to beanboxImage
+  isVideo: true,                  // set to false for static images/GIFs
+  projectLink: 'https://beanbox-frontend.onrender.com/login',
+  features: [
+    'Frontend: React.js with responsive, mobile-first design',
+    'Robust auth: JWT security, password reset, session management',
+    'Configurable pack system: multiple pack types with probabilistic rarity models',
+    'Real‑time compendium: client‑side filtering, sorting, and pagination of 50+ bean types',
+    'Social layer: Bean Bud requests, Bean Showcase for sharing favorites',
+    'Customizable profiles: unlockable avatars, and titles',
+    'Tiered achievement engine: daily, weekly, and lifetime challenges',
+    'Scalable backend: Node.js/Express API, PostgreSQL schema, Dockerized services',
+    'Future roadmap: promo bean drops, advanced social interactions, many more beans',
+  ],
+};
 
   return (
     <div className="App">

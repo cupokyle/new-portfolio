@@ -34,7 +34,7 @@ function FeaturedProject({ title, description, mediaUrl, isVideo = false, projec
           </a>
         </div>
         <div className="featured-details">
-          <h2>Featured Project</h2>
+          <h2>Currently Building:</h2>
           <h3>{title}</h3>
           <p>{description}</p>
           {features?.length && (
@@ -43,7 +43,7 @@ function FeaturedProject({ title, description, mediaUrl, isVideo = false, projec
             </ul>
           )}
           <a href={projectLink} target="_blank" rel="noopener noreferrer" className="btn">
-            View Live App
+            Try it out!
           </a>
         </div>
       </div>
