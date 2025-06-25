@@ -1,17 +1,7 @@
 // src/components/FeaturedProject.js
 import React from 'react';
-import './FeaturedProject.css'; // make sure this file exists and is imported in your main CSS build
+import './FeaturedProject.css'; // CSS includes fade-in animations
 
-/**
- * FeaturedProject component now supports both static images and animated GIFs/videos.
- * Props:
- *  - title: string
- *  - description: string
- *  - mediaUrl: string (image or GIF URL)
- *  - isVideo: boolean (if true, renders a <video> element)
- *  - projectLink: string (URL to live app)
- *  - features: array of strings (key bullet points)
- */
 function FeaturedProject({ title, description, mediaUrl, isVideo = false, projectLink, features }) {
   return (
     <section id="featured-project" className="featured-project">
@@ -19,15 +9,15 @@ function FeaturedProject({ title, description, mediaUrl, isVideo = false, projec
         <div className="featured-media">
           <a href={projectLink} target="_blank" rel="noopener noreferrer">
             {isVideo ? (
-                <video
-                  src={mediaUrl}
-                  autoPlay
-                  loop
-                  muted
-                  defaultMuted
-                  playsInline
-                  className="media-element"
-                />
+              <video
+                src={mediaUrl}
+                autoPlay
+                loop
+                muted
+                defaultMuted
+                playsInline
+                className="media-element"
+              />
             ) : (
               <img src={mediaUrl} alt={title} className="media-element" />
             )}
