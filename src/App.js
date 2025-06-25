@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ProjectList from './components/ProjectList';
-import FeaturedProject from './components/FeaturedProject';
+// import FeaturedProject from './components/FeaturedProject';
 import About from './components/About';
 import Contact from './components/Contact';
 import './App.css'; // Make sure to create an App.css file for styling
@@ -61,7 +61,7 @@ const featuredProject = {
   <h1 className="title">Kyle Forsyth Web Development</h1>
   <div className="animation-box"></div>
 </div>
-        <FeaturedProject {...featuredProject} />
+      {/* <FeaturedProject project={featuredProject} /> */}
         <ProjectList projects={projects} />
         <About bioImage={bioImage} bioAlt={bioAlt} />
         <Contact />
