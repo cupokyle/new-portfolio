@@ -519,3 +519,30 @@ section h2 {
     border-radius: 50% 30% 50% 70% / 40% 60% 30% 60%;
   }
 }
+
+/* 1) Hide the blinking caret in any element that might show one */
+* {
+  caret-color: transparent !important;
+}
+
+/* 2) Remove all focus outlines (the “glow” or dotted border) */
+:focus {
+  outline: none !important;
+}
+
+/* 3) If you still want keyboard-accessible focus, you can instead
+      replace the default outline with a very subtle shadow (optional):
+
+:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.3);
+}
+*/
+
+/* 4) (Optional) Prevent text-selection entirely if you really never
+      want any text to be selectable / editable: */
+
+body, 
+body * {
+  user-select: none !important;
+}
