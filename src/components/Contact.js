@@ -11,7 +11,7 @@ function Contact() {
       <div className='contactBox'>
         <div className='contactThird' id='myResume'>
         <h2>My Resume</h2>
-        <div className="linkBoxItem no-decor" id='resumeIcon' ><a target="blank" href='https://www.canva.com/design/DAFkWGPTl9A/K56vHT6ETAgXeyzMa2e-fA/view?utm_content=DAFkWGPTl9A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'><FaWpforms size={70} /></a></div>
+        <div className="linkBoxItem no-decor" id='resumeIcon' ><a target="blank" href='https://www.canva.com/design/DAFkWGPTl9A/8Z0FyeFR5IxOJ91NDAtYCQ/view?utm_content=DAFkWGPTl9A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h496a98a029'><FaWpforms size={70} /></a></div>
         </div>
         <div className='contactThird' id='myLinks'>
           <h2>My Links</h2>
